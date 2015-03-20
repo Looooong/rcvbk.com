@@ -1,0 +1,9 @@
+RewriteEngine on
+
+Header set Access-Control-Allow-Origin *
+Header set Cache-Control public
+
+RewriteRule ^resource/ - [L,NC]
+RewriteRule ^game/ - [L,NC]
+RewriteRule \.(js)|(css)$ - [L,NC]
+RewriteRule ^.*$ index.php [L,NC]

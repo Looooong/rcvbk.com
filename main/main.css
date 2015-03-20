@@ -1,0 +1,389 @@
+html {
+	/*overflow: hidden;*/
+	height: 100%;	
+}
+
+@font-face {
+	font-family: "Atomic Clock Radio";
+	src: url(/resource/font/atomicClockRadio.ttf);
+}
+
+@font-face{ 
+	font-family: 'TGA';
+	src: url(/resource/font/TGA.eot);
+	src: url(/resource/font/TGA.eot?iefix) format('eot'),
+	     url(/resource/font/TGA.ttf) format('truetype');
+}
+
+.clock {
+	font-size: 6vw;
+	font-weight: lighter;
+	font-family: "Atomic Clock Radio", mono;
+}
+
+h1 {
+	color: #000000;
+	margin: 0;
+	font-weight: bold;
+}
+
+body {
+	color: #FFFFFF;
+	margin: 0;
+	height: 100%;
+	padding: 1px;
+	overflow: auto;
+	font-size: 26px;
+	min-width: 800px;
+	background: #1B66BB;
+	font-family: "TGA", "Segoe UI Light", serif;
+}
+
+#navigator {
+	color: #FFFFFF;
+	margin: 0;
+	padding: 0;
+	display: block;
+	overflow: hidden;
+	list-style: none;
+	text-align: center;
+	background: #2D85E7;
+}
+
+#navigator ul {
+	padding: 0;
+	text-align: left;
+}
+
+#navigator li {
+	padding: 0;
+	text-align: left;
+}
+
+#navigator a {
+	color: #FFFFFF;
+	cursor: pointer;
+	display: block;
+	padding: 10px 20px;
+	font-size: 0.8em;
+	text-align: left;
+	text-decoration: none;
+	
+	-webkit-transition: background-color 0.5s;
+	-moz-transition: background-color 0.5s;
+	-o-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+}
+
+#navigator a:hover {
+	background-color: #80B9FA;	
+}
+
+#navigator > li > a {
+	cursor: pointer;
+	display: block;
+	padding: 20px 40px;
+	font-size: 1.44em;
+	text-align: center;
+}
+
+#navigator > li {
+	padding: 0;
+	display: inline-block;
+	vertical-align: top;
+	background-color: inherit;
+	
+	-webkit-transition: background-color 1s;
+	-moz-transition: background-color 1s;
+	-o-transition: background-color 1s;
+	transition: background-color 1s;
+}
+
+#navigator > li:hover {
+	background-color: #60A6F3;	
+}
+
+#navigator > li > ul {
+	display: block;
+	z-index: 9;
+	overflow: hidden;
+	position: absolute;
+	max-height: 0px;
+	list-style: none;
+	background: inherit;
+	
+	-webkit-transition: max-height 1s cubic-bezier(0.5,0,0.5,1);
+	-moz-transition: max-height 1s cubic-bezier(0.5,0,0.5,1);
+	-o-transition: max-height 1s cubic-bezier(0.5,0,0.5,1);
+	transition: max-height 1s cubic-bezier(0.5,0,0.5,1);
+}
+
+#navigator > li:hover > ul {
+	z-index: 10;
+	max-height: 400px;
+}
+
+#header {
+	margin: 0;
+	padding: 0;
+}
+
+#header > img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+#eventMap {
+	color: #FFFFFF;
+	padding: 20px;
+	min-width: 600px;
+	font-size: 4vw;
+	text-align: center;
+	background: #2D85E7;
+}
+
+#mainContent {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	opacity: 0;
+	
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	-o-transition: opacity 1s;
+	transition: opacity 1s;
+}
+
+#mainContent > article {
+	color: #DDDDDD;
+	margin: 50px;
+	padding: 50px;
+	font-size: 0.8em;
+	box-shadow: rgba(0, 0, 0, 0.5) 0 0 20px;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+#mainContent > article h1 {
+	color: #FFFFFF;
+	margin: 20px auto;
+	font-size: 3em;
+	font-weight: normal;
+}
+
+#mainContent > article h2 {
+	color: #FFFFFF;
+	margin: 15px auto;
+	font-size: 2.5em;
+	font-weight: normal;
+}
+
+#mainContent > article h3 {
+	color: #FFFFFF;
+	margin: 10px auto;
+	font-size: 2em;
+	font-weight: normal;
+}
+
+#mainContent > article h4 {
+	color: #FFFFFF;
+	margin: 5px auto;
+	font-size: 1.5em;
+	font-weight: normal;
+}
+
+#mainContent p {
+	text-align: justify;
+	text-indent: 50px;
+}
+
+#mainContent ul {
+	text-align: justify;	
+}
+
+#mainContent ol {
+	text-align: justify;
+}
+
+#mainContent img {
+	width: 100%;
+	height: 100%;	
+}
+
+#mainContent a {
+	color: #80B9FA;
+	text-decoration: none;
+		
+	-webkit-transition: color 0.25s;
+	-moz-transition: color 0.25s;
+	-o-transition: color 0.25s;
+	transition: color 0.25s;
+}
+	
+#mainContent a:hover {
+	color: #AADDFA;
+}
+
+#mainContent b {
+	font-size: 1.25em;	
+}
+
+#footer {
+	color: #FFFFFF;
+	margin: 0;
+	padding: 20px;
+	font-size: 0.54em;
+	background-color: #2D85E7;
+	
+	
+}
+
+#footer a {
+	color: #FFFFFF;
+	cursor: pointer;
+	text-decoration: none;
+	
+	-webkit-transition: color 0.25s;
+	-moz-transition: color 0.25s;
+	-o-transition: color 0.25s;
+	transition: color 0.25s;
+}
+
+#footer a:hover {
+	color: #AADDFA;
+}
+
+#footer > table {
+	width: 100%;	
+}
+
+#footer .organizers td {
+	padding: 5px;	
+}
+
+#footer .contact {
+	width: auto;	
+	margin: auto;
+}
+
+#footer .contact td {
+	padding: 10px;
+}
+
+#footer div.logo {
+	width: 100%;
+	text-align: center;	
+}
+
+#footer a.logoFB {
+	width: 64px;
+	height: 64px;
+	margin: 10px 25px;
+	display: inline-block;
+	background-size: cover;
+	background-image: url(/resource/img/logoFB.png);
+	background-repeat: no-repeat;
+	
+	-webkit-transition: background-image 0.5s;
+	-moz-transition: background-image 0.5s;
+	-o-transition: background-image 0.5s;
+	transition: background-image 0.5s;
+}
+
+#footer a.logoFB::after {
+	display: none;
+	content: url(/resource/img/logoFBhover.png);
+}
+
+#footer a.logoFB:hover {
+	background-image: url(/resource/img/logoFBhover.png);
+}
+
+#footer a.logoGP {
+	width: 64px;
+	height: 64px;
+	margin: 10px 25px;
+	display: inline-block;
+	background-size: cover;
+	background-image: url(/resource/img/logoGP.png);
+	background-repeat: no-repeat;
+	
+	-webkit-transition: background-image 0.5s;
+	-moz-transition: background-image 0.5s;
+	-o-transition: background-image 0.5s;
+	transition: background-image 0.5s;
+}
+
+#footer a.logoGP::after {
+	display: none;
+	content: url(/resource/img/logoGPhover.png);
+}
+
+#footer a.logoGP:hover {
+	background-image: url(/resource/img/logoGPhover.png);
+}
+
+#footer .logoBK {
+	width: 32px;
+	height: 32px;
+	display: block;
+	background-image: url(/resource/icon/logoBK.png);
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+
+#footer .logoRCV {
+	width: 32px;
+	height: 32px;
+	display: block;
+	background-image: url(/resource/icon/logoRCV.png);
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+
+#footer .logoCSE {
+	width: 32px;
+	height: 32px;
+	display: block;
+	background-image: url(/resource/icon/logoCSE.png);
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+
+#footer .logoGroup {
+	width: 32px;
+	height: 32px;
+	display: block;
+	background-image: url(/resource/icon/logoGroup.png);
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+
+a.strong {
+	color: #FFFFFF !important;
+	border: none;
+	margin: 10px;
+	cursor: pointer;
+	outline: none;
+	padding: 10px 20px;
+	display: inline-block;
+	font-size: 1.5em;
+	font-weight: lighter;
+	vertical-align: middle;
+	text-decoration: none;
+	background-color: #2D85E7;
+	
+	-webkit-transition: background-color 0.5s !important;
+	-moz-transition: background-color 0.5s !important;
+	-o-transition: background-color 0.5s !important;
+	transition: background-color 0.5s !important;
+}
+
+a.strong:hover {
+	background-color: #80B9FA;
+}
+
+a.strong:active {
+	background-color: #60A6F3;
+}
